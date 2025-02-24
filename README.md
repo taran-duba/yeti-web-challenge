@@ -51,6 +51,10 @@ These requirements are as follows (and can be found in `__tests__/todo.test.tsx`
 - When a todo is clicked (including the text), it should be marked as complete.
 - If the user clicks the "Add" button without entering a todo, the todo list should not change.
 
+This is a screen recording of an app that passes all the automated requirements:
+https://github.com/user-attachments/assets/0601cb43-8fc6-47d8-a5e7-c0ddb758357b
+
+
 Please let us know if you have any questions, or are having difficulty with the automated tests. There's a chance that the tests are not 100% accurate for all cases, so if you think you've followed the requirements but the tests are failing, please let us know.
 
 ## Submission
