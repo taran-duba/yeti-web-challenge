@@ -40,6 +40,19 @@ We will be evaluating your code on the following criteria:
 
 This is not meant to be a "test" in the traditional sense (we won't have strict points), but rather a check in to see how you're doing, and where YETI mentors can help you. So don't worry about passing or failing, but rather doing your best, and ensure the effort is your own. Again, if the work is your own, we'll be able to better help you.
 
+### Automated Testing Requirements
+
+Your code should be able to pass the automated tests run by `pnpm test`.
+
+These requirements are as follows (and can be found in `__tests__/todo.test.tsx`):
+
+- The todo list has an input field with the placeholder "Add a new todo"
+- Todos should add a new todo when the user clicks the "Add" button. Each todo should show the text the user entered.
+- When a todo is clicked (including the text), it should be marked as complete.
+- If the user clicks the "Add" button without entering a todo, the todo list should not change.
+
+Please let us know if you have any questions, or are having difficulty with the automated tests. There's a chance that the tests are not 100% accurate for all cases, so if you think you've followed the requirements but the tests are failing, please let us know.
+
 ## Submission
 
 Please send a link to the GitHub repo to a YETI mentor. We will review your code and give you feedback at a meeting.
