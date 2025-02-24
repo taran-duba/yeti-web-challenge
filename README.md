@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# YETI Web Challenge
 
-## Getting Started
+Welcome to the YETI Web Challenge! This is a quick progress check to see how you're doing with web development, and to help us understand how we can best support you.
 
-First, run the development server:
+This repository is a Next.js app with a basic todo list setup. The packages installed are reflective of what we currently use at YETI, but you are welcome to use any other libraries you want.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## The Challenge
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You will be building a web app that allows users to manage a todo list. This will test your ability to:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Build a web app using Next.js and Tailwind CSS
+- Use a UI library
+- (optionally) Use a database/local storage
+- (optionally) Implement authentication and user accounts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Rules
 
-## Learn More
+- Please avoid the use of AI tools. This can be a good way to learn if utilized effectively, but for this challenge, we want to see your own code (plus you'll get a better understanding of how YOU are doing).
+- Please do not share your code with YETI team members. Again, this is an assessment, and we want to see your own work.
+- You can use Google or look at documentation for libraries included in this repository (e.g., shadcn/ui, Tailwind CSS, or Next.js documentation), but please write your own code for this challenge (e.g. don't search "how to create a todo list react").
+- For the purposes of this challenge, we will be using Next.js, Tailwind CSS, and shadcn/ui (this is the UI library we currently use at YETI), but you are welcome to use any other libraries you want.
+  - We've installed the Button component from shadcn/ui, but you are welcome to use any other UI library you want.
+  - When installing components, use `shadcn@canary` instead of `shadcn@latest`. This project uses Tailwind V4, and the latest release is not yet compatible.
+- We encourage you to ask questions if you have them to YETI mentors. We will be available to help via Discord.
 
-To learn more about Next.js, take a look at the following resources:
+Bonus points for:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1) Having a nice UI (animations are extra points)
+2) Using local storage or a database to persist the todo list (even more if you add an ORM)
+3) Implementing authentication and user accounts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Evaluation Criteria
 
-## Deploy on Vercel
+We will be evaluating your code on the following criteria:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Code readability / cleanliness
+- Completion of the challenge
+  - Unit tests passing
+  - Features working in a demo
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This is not meant to be a "test" in the traditional sense (we won't have strict points), but rather a check in to see how you're doing, and where YETI mentors can help you. So don't worry about passing or failing, but rather doing your best, and ensure the effort is your own. Again, if the work is your own, we'll be able to better help you.
+
+## Submission
+
+Please send a link to the GitHub repo to a YETI mentor. We will review your code and give you feedback at a meeting.
+
+You'll have about 1 week to complete the challenge. Please let us know if you need more time, and include time spent in your README.md.
