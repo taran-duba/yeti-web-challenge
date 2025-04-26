@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Button } from './button';
-import ConfettiExplosion from 'react-confetti-explosion';
+import { useWindowSize } from 'react-use';
+import { useReward } from 'react-rewards';
 
 interface ListProps {
   items: string[];
@@ -9,24 +10,23 @@ interface ListProps {
 
 const List = ({ items, onSendList }: ListProps) => {
   const [isExploding, setIsExploding] = useState(false);
+  const { width, height } = useWindowSize();
+  const { reward, isAnimating } = useReward('rewardId', 'confetti');
   const completeTask = (index: number) => {
+    console.log("Task completed, index:", index);
     const newList = [...items];
     newList.splice(index, 1);
     onSendList(newList);
     setIsExploding(true);
-    setTimeout(() => {
-      setIsExploding(false);
-    }, 2000);
   }
   return (
     <div>
-        {items.map((task, index) => (
-          <>
-            <button key={index} onClick={() => completeTask(index)}>{task}</button>
-            <br/>
-          </>
-        ))}
-        {isExploding && <ConfettiExplosion />}
+      {isExploding && (
+        <span id='rewardId'></span>
+      )}
+      {items.map((task, index, _) => (
+          <button key={index} className='my-4' onClick={() => completeTask(index)}>{task}</button>
+      ))}
     </div>
   )
 }

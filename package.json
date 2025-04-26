@@ -19,8 +19,9 @@
     "next": "15.1.7",
     "pnpm": "^10.9.0",
     "react": "^19.0.0",
-    "react-confetti-explosion": "^2.1.2",
     "react-dom": "^19.0.0",
+    "react-rewards": "^2.1.0",
+    "react-use": "^17.6.0",
     "shadcn": "^2.5.0-canary.1",
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7"
