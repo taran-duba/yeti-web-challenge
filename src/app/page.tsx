@@ -35,7 +35,7 @@ export default function Home() {
   }
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setTaskName(event.target.value);
+    setTaskName(event.currentTarget.value);
   };
 
   useEffect(() => {
@@ -49,11 +49,12 @@ export default function Home() {
     <div className="p-4">
       <h1 className="text-3xl font-bold">
         To Do
-      </h1>
+      </h1> 
       <div className="flex justify-between">
-        <input placeholder="Task..." autoFocus className="mt-3" onChange={handleInputChange} onSubmit={clearInput}/>
+        <input placeholder="add a new todo" autoFocus className="mt-3" onChange={handleInputChange} onSubmit={clearInput}/>
         <Button onClick={() => setAdded(true)} type="submit">Add Task</Button>
       </div>
+      <br/>
       <List items={taskList} onSendList={handleNewList}/>
     </div>
   );

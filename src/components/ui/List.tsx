@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from './button';
+import ConfettiExplosion from 'react-confetti-explosion';
 
 interface ListProps {
   items: string[];
@@ -7,19 +8,25 @@ interface ListProps {
 }
 
 const List = ({ items, onSendList }: ListProps) => {
-  var list: string[] = [];
+  const [isExploding, setIsExploding] = useState(false);
   const completeTask = (index: number) => {
-    list.splice(index, 1);
-    onSendList(list);
+    const newList = [...items];
+    newList.splice(index, 1);
+    onSendList(newList);
+    setIsExploding(true);
+    setTimeout(() => {
+      setIsExploding(false);
+    }, 2000);
   }
   return (
     <div>
         {items.map((task, index) => (
           <>
-            <Button key={index} onClick={() => completeTask(index)}>{task}</Button>
-            <br />
+            <button key={index} onClick={() => completeTask(index)}>{task}</button>
+            <br/>
           </>
         ))}
+        {isExploding && <ConfettiExplosion />}
     </div>
   )
 }
