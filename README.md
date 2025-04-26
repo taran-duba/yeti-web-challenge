@@ -62,3 +62,6 @@ Please let us know if you have any questions, or are having difficulty with the 
 Please send a link to the GitHub repo to a YETI mentor. We will review your code and give you feedback at a meeting.
 
 You'll have about 1 week to complete the challenge. Please let us know if you need more time, and include time spent in your README.md.
+
+## Time Taken
+2 hours?
