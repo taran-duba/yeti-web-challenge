@@ -22,7 +22,7 @@ export default function Home() {
 
   const handleNewList = (list: string[]) => {
     setTaskList(list);
-    localStorage.setItem("list", JSON.stringify(taskList));
+    localStorage.setItem("list", JSON.stringify(list));
   }
 
   const addTask = () => {
