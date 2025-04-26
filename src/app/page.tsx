@@ -17,7 +17,7 @@ export default function Home() {
   }, []);
 
   const clearInput = () => {
-    
+    setTaskName('');
   }
 
   const handleNewList = (list: string[]) => {
@@ -51,11 +51,14 @@ export default function Home() {
         To Do
       </h1> 
       <div className="flex justify-between">
-        <input placeholder="add a new todo" autoFocus className="mt-3" onChange={handleInputChange} onSubmit={clearInput}/>
+        <input placeholder="add a new todo" autoFocus className="mt-3" onChange={handleInputChange} value={taskName} onSubmit={clearInput}/>
         <Button onClick={() => setAdded(true)} type="submit">Add Task</Button>
       </div>
       <br/>
       <List items={taskList} onSendList={handleNewList}/>
+      <footer>
+       <span id='rewardId'></span>
+      </footer>
     </div>
   );
 }

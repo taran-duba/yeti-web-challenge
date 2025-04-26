@@ -18,15 +18,18 @@ const List = ({ items, onSendList }: ListProps) => {
     newList.splice(index, 1);
     onSendList(newList);
     setIsExploding(true);
+    reward();
   }
   return (
     <div>
-      {isExploding && (
-        <span id='rewardId'></span>
-      )}
-      {items.map((task, index, _) => (
-          <button key={index} className='my-4' onClick={() => completeTask(index)}>{task}</button>
-      ))}
+      <div className='w-full text-left pl-4 border-2 bg-gray-100 py-2 rounded-lg'>
+        {items.map((task, index, _) => (
+          <div key={index} className=''>
+            <button className='' onClick={() => completeTask(index)}>{task}</button>
+            <br></br>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
